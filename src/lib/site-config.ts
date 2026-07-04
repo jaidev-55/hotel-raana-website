@@ -15,7 +15,11 @@ export const siteConfig = {
   cuisine: ["Indian", "Biryani", "South Indian"],
   rating: 4.4,
   reviewCount: 316,
-  instagram: "https://instagram.com/hotelraana",
-  // Fill these from Google Maps → right-click the pin → coordinates
+  instagram: "https://www.instagram.com/hotelraana/",
+  facebook: "https://www.facebook.com/hotelraana/",
+  youtube: "https://www.youtube.com/@HotelRaana",
   geo: { lat: 10.786, lng: 79.138 },
+  swiggy:
+    "https://www.swiggy.com/city/thanjavur/hotel-raana-thanjavur-city-rest1056546",
+  zomato: "https://www.zomato.com/tanjore/hotel-raana-annai-sathya-nagar/",
 } as const;
