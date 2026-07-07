@@ -110,7 +110,7 @@ export function Hero() {
           </motion.div>
         </motion.div>
 
-        {/* ── Right: image ── */}
+  
         <motion.div
           variants={imageIn}
           initial="hidden"
