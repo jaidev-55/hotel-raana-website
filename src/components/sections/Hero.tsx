@@ -37,17 +37,18 @@ export function Hero() {
 
   return (
     <section className="relative overflow-hidden bg-[#FAF6EF]">
-      <div className="pointer-events-none absolute -top-32 -left-24 h-96 w-96 rounded-full bg-[#D4202A]/5 blur-3xl" />
-      <div className="pointer-events-none absolute -bottom-32 right-0 h-96 w-96 rounded-full bg-[#1B1F4B]/5 blur-3xl" />
-
-      <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 px-6 pt-28 pb-16 lg:grid-cols-2 lg:gap-16 lg:pt-24 lg:pb-24">
-        {/* ── Left: content ── */}
+      <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 px-6 pt-32 pb-16 lg:grid-cols-2 lg:gap-16 lg:pt-32 lg:pb-24">
         <motion.div variants={container} initial="hidden" animate="show">
-          <motion.div variants={item} className="mb-5 flex items-center gap-3">
-            <span className="h-px w-10 shrink-0 bg-[#C9A24B]" />
-            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#C9A24B] sm:text-sm">
-              The Art of Fine Dining · {siteConfig.city}
-            </span>
+          <motion.div variants={item} className="mb-5">
+            <p className="font-display text-2xl font-bold leading-none text-[#D4202A] sm:text-3xl">
+              Hotel Raana
+            </p>
+            <div className="mt-3 flex items-center gap-3">
+              <span className="h-px w-10 shrink-0 bg-[#C9A24B]" />
+              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#C9A24B] sm:text-sm">
+                The Art of Fine Dining · {siteConfig.city}
+              </span>
+            </div>
           </motion.div>
 
           <motion.h1

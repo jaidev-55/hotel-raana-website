@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { siteConfig } from "@/lib/site-config";
+import Image from "next/image";
 
 const links = [
   { label: "Home", href: "/" },
@@ -46,6 +47,21 @@ const Navbar = () => {
         }`}
       >
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+          <Link
+            href="/"
+            onClick={() => setOpen(false)}
+            aria-label="Hotel Raana — home"
+          >
+            <Image
+              src="/images/raanna-logo.png"
+              alt="Hotel Raana"
+              width={1200}
+              height={500}
+              priority
+              className="h-auto w-32"
+            />
+          </Link>
+
           {/* Desktop links */}
           <ul className="hidden items-center gap-8 lg:flex">
             {links.map((l) => {

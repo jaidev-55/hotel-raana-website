@@ -2,6 +2,7 @@ import Link from "next/link";
 import { siteConfig } from "@/lib/site-config";
 import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
 import { OrderButtons } from "../OrderButtons";
+import Image from "next/image";
 
 const explore = [
   { label: "Menu", href: "#menu" },
@@ -29,12 +30,13 @@ const Footer = () => {
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div className="lg:pr-6">
-            <span className="font-display text-2xl font-bold text-white">
-              Hotel Raana
-            </span>
-            <p className="mt-1 text-xs font-semibold uppercase tracking-[0.2em] text-[#C9A24B]">
-              The Art of Fine Dining
-            </p>
+            <Image
+              src="/images/raanna-logo.png"
+              alt="Hotel Raana"
+              width={1200}
+              height={300}
+              className="h-auto w-40 rounded-xl"
+            />
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-[#B7B3AC]">
               A little corner of Thanjavur where good food and warm welcomes go
               together. Come as you are — you&apos;ll leave a regular.
@@ -115,8 +117,7 @@ const Footer = () => {
                 {siteConfig.landline}
               </a>
             </div>
-
-            <OrderButtons className="mt-6" />
+            <OrderButtons className="mt-6 flex-col! [&>a]:w-full" />
 
             <div className="mt-6 flex items-center gap-3">
               {socials.map(({ label, href, Icon }) => (
