@@ -31,7 +31,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="lg:pr-6">
             <Image
-              src="/images/raanna-logo.png"
+              src="/images/raana-logo.png"
               alt="Hotel Raana"
               width={1200}
               height={300}
