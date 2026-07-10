@@ -6,6 +6,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { Providers } from "./providers";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -91,6 +92,7 @@ export default function RootLayout({
         <Footer />
         <WhatsAppButton />
       </body>
+      <GoogleAnalytics gaId="G-7P5KETGPRD" />
     </html>
   );
 }
