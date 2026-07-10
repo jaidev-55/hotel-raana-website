@@ -1,13 +1,11 @@
 import type { MetadataRoute } from "next";
-import { siteConfig } from "@/lib/site-config";
-export const dynamic = "force-dynamic";
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const routes = ["", "/menu", "/rooms", "/gallery", "/contact"];
-  return routes.map((r) => ({
-    url: `${siteConfig.url}${r}`,
-    lastModified: new Date(),
-    changeFrequency: "monthly",
-    priority: r === "" ? 1 : 0.8,
-  }));
+export default function robots(): MetadataRoute.Robots {
+  return {
+    rules: {
+      userAgent: "*",
+      allow: "/",
+    },
+    sitemap: "https://hotelraana.com/sitemap.xml",
+  };
 }
